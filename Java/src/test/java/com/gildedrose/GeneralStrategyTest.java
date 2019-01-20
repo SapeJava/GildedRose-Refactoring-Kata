@@ -4,12 +4,12 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GeneralItemStrategyTest {
+public class GeneralStrategyTest {
 
     private static final String GENERAL_ITEM = "General Test Item";
 
     @Test
-    public void updateQuality_shouldLowerSellInOfGeneralItemByOne() {
+    public void updateItemAtEndOfDay_shouldLowerSellInOfGeneralItemByOne() {
         Item generalItem = new Item(GENERAL_ITEM, 20, 40);
         GildedRose gildedRose = new GildedRose(new Item[] {generalItem});
 
@@ -19,7 +19,7 @@ public class GeneralItemStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldLowerQualityOfGeneralItemByOne() {
+    public void updateItemAtEndOfDay_shouldLowerQualityOfGeneralItemByOne() {
         Item generalItem = new Item(GENERAL_ITEM, 20, 40);
         GildedRose gildedRose = new GildedRose(new Item[] {generalItem});
 
@@ -29,7 +29,7 @@ public class GeneralItemStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldNotLowerQualityOfGeneralItem_whenQualityEqualsZero() {
+    public void updateItemAtEndOfDay_shouldNotLowerQualityOfGeneralItem_whenQualityEqualsZero() {
         Item generalItem = new Item(GENERAL_ITEM, 20, 0);
         GildedRose gildedRose = new GildedRose(new Item[] {generalItem});
 
@@ -39,7 +39,7 @@ public class GeneralItemStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldLowerQualityOfGeneralItemByTwo_whenSellInEqualsZero() {
+    public void updateItemAtEndOfDay_shouldLowerQualityOfGeneralItemByTwo_whenSellInEqualsZero() {
         Item generalItem = new Item(GENERAL_ITEM, 0, 40);
         GildedRose gildedRose = new GildedRose(new Item[] {generalItem});
 
@@ -49,7 +49,7 @@ public class GeneralItemStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldLowerQualityOfGeneralItemByTwo_whenSellInLowerThanZero() {
+    public void updateItemAtEndOfDay_shouldLowerQualityOfGeneralItemByTwo_whenSellInLowerThanZero() {
         Item generalItem = new Item(GENERAL_ITEM, -2, 40);
         GildedRose gildedRose = new GildedRose(new Item[] {generalItem});
 

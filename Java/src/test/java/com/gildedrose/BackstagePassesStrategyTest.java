@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BackstagePassesStrategyTest {
 
     @Test
-    public void updateQuality_shouldLowerSellInOfBackstagePassesByOne() {
+    public void updateItemAtEndOfDay_shouldLowerSellInOfBackstagePassesByOne() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 20, 50);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 
@@ -17,7 +17,7 @@ public class BackstagePassesStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldLowerSellInOfBackstagePassesToNegativeNumber_whenSellInEqualsZero() {
+    public void updateItemAtEndOfDay_shouldLowerSellInOfBackstagePassesToNegativeNumber_whenSellInEqualsZero() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 0, 50);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 
@@ -27,7 +27,7 @@ public class BackstagePassesStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldIncreaseQualityOfBackstagePassesByOne_whenSellInHigherThanTen() {
+    public void updateItemAtEndOfDay_shouldIncreaseQualityOfBackstagePassesByOne_whenSellInHigherThanTen() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 11, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 
@@ -37,7 +37,7 @@ public class BackstagePassesStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldIncreaseQualityOfBackstagePassesByTwo_whenSellInEqualsTen() {
+    public void updateItemAtEndOfDay_shouldIncreaseQualityOfBackstagePassesByTwo_whenSellInEqualsTen() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 10, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 
@@ -47,7 +47,7 @@ public class BackstagePassesStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldIncreaseQualityOfBackstagePassesByTwo_whenSellInBetweenTenAndFive() {
+    public void updateItemAtEndOfDay_shouldIncreaseQualityOfBackstagePassesByTwo_whenSellInBetweenTenAndFive() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 7, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 
@@ -57,7 +57,7 @@ public class BackstagePassesStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldIncreaseQualityOfBackstagePassesByThree_whenSellInEqualsFive() {
+    public void updateItemAtEndOfDay_shouldIncreaseQualityOfBackstagePassesByThree_whenSellInEqualsFive() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 5, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 
@@ -67,7 +67,7 @@ public class BackstagePassesStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldIncreaseQualityOfBackstagePassesByThree_whenSellInBetweenFiveAndZero() {
+    public void updateItemAtEndOfDay_shouldIncreaseQualityOfBackstagePassesByThree_whenSellInBetweenFiveAndZero() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 3, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 
@@ -77,7 +77,7 @@ public class BackstagePassesStrategyTest {
     }
 
     @Test
-    public void updateQuality_shouldLowerQualityOfBackstagePassesToZero_whenSellInEqualsZero() {
+    public void updateItemAtEndOfDay_shouldLowerQualityOfBackstagePassesToZero_whenSellInEqualsZero() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 0, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 

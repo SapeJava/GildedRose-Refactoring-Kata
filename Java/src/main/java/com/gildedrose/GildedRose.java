@@ -13,7 +13,8 @@ class GildedRose {
             AGED_BRIE, new AgedBrieStrategy(),
             BACKSTAGE_PASSES, new BackstagePassesStrategy(),
             SULFURAS, new SulfurasStrategy(),
-            GENERAL, new GeneralItemStrategy()
+            CONJURED, new ConjuredStrategy(),
+            GENERAL, new GeneralStrategy()
     );
 
     Item[] items;
