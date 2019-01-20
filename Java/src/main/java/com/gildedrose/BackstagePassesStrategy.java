@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class BackstagePassesStrategy extends ItemStrategy {
+class BackstagePassesStrategy extends ItemStrategy {
 
     private static final int QUALITY_INCREASE_OF_TWO = 2;
     private static final int QUALITY_INCREASE_OF_THREE = 3;

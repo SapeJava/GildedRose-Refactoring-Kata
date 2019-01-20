@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class SulfurasStrategy extends ItemStrategy {
+class SulfurasStrategy extends ItemStrategy {
 
     @Override
     void updateItem(Item item) {

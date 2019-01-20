@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class GeneralItemStrategy extends ItemStrategy {
+class GeneralItemStrategy extends ItemStrategy {
 
     private static final int QUALITY_DECREASE_OF_TWO = 2;
     private static final int QUALITY_DECREASE_BY_TWO_BOUNDARY = 0;
