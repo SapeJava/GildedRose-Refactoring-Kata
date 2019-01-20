@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BackstagePassesStrategyTest {
 
     @Test
-    public void updateItemAtEndOfDay_shouldLowerSellInOfBackstagePassesByOne() {
+    public void updateItemAtEndOfDay_shouldDecreaseSellInOfBackstagePassesByOne() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 20, 50);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 
@@ -17,7 +17,7 @@ public class BackstagePassesStrategyTest {
     }
 
     @Test
-    public void updateItemAtEndOfDay_shouldLowerSellInOfBackstagePassesToNegativeNumber_whenSellInEqualsZero() {
+    public void updateItemAtEndOfDay_shouldDecreaseSellInOfBackstagePassesToNegativeNumber_whenSellInEqualsZero() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 0, 50);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 
@@ -77,7 +77,7 @@ public class BackstagePassesStrategyTest {
     }
 
     @Test
-    public void updateItemAtEndOfDay_shouldLowerQualityOfBackstagePassesToZero_whenSellInEqualsZero() {
+    public void updateItemAtEndOfDay_shouldDecreaseQualityOfBackstagePassesToZero_whenSellInEqualsZero() {
         Item backstagePasses = new Item(ItemType.BACKSTAGE_PASSES.getFullName(), 0, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{backstagePasses});
 

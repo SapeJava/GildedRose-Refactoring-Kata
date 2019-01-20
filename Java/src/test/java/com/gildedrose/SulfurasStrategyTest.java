@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class SulfurasStrategyTest {
 
     @Test
-    public void updateItemAtEndOfDay_shouldNotLowerOrIncreaseSellInOfSulfuras() {
+    public void updateItemAtEndOfDay_shouldNotDecreaseOrIncreaseSellInOfSulfuras() {
         Item sulfuras = new Item(ItemType.SULFURAS.getFullName(), 20, 80);
         GildedRose gildedRose = new GildedRose(new Item[]{sulfuras});
 
@@ -17,7 +17,7 @@ public class SulfurasStrategyTest {
     }
 
     @Test
-    public void updateItemAtEndOfDay_shouldNotLowerOrIncreaseQualityOfSulfuras() {
+    public void updateItemAtEndOfDay_shouldNotDecreaseOrIncreaseQualityOfSulfuras() {
         Item sulfuras = new Item(ItemType.SULFURAS.getFullName(), 20, 80);
         GildedRose gildedRose = new GildedRose(new Item[]{sulfuras});
 

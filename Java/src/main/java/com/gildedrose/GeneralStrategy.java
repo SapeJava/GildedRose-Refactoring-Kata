@@ -11,22 +11,22 @@ class GeneralStrategy extends ItemStrategy {
         int sellIn = item.sellIn;
         int quality = item.quality;
 
-        if (qualityShouldBeLoweredByTwo(sellIn, quality)) {
+        if (qualityShouldBeDecreasedByTwo(sellIn, quality)) {
             item.quality -= QUALITY_DECREASE_OF_TWO;
-        } else if (qualityShouldBeLoweredByOne(sellIn, quality)) {
+        } else if (qualityShouldBeDecreasedByOne(sellIn, quality)) {
             item.quality--;
         }
 
         item.sellIn--;
     }
 
-    private boolean qualityShouldBeLoweredByTwo(int sellIn, int quality) {
+    private boolean qualityShouldBeDecreasedByTwo(int sellIn, int quality) {
         int newQuality = quality - QUALITY_DECREASE_OF_TWO;
 
         return sellIn <= QUALITY_DECREASE_BY_TWO_BOUNDARY && newQuality >= QUALITY_BOTTOM;
     }
 
-    private boolean qualityShouldBeLoweredByOne(int sellIn, int quality) {
+    private boolean qualityShouldBeDecreasedByOne(int sellIn, int quality) {
         int newQuality = --quality;
 
         return sellIn > QUALITY_DECREASE_BY_TWO_BOUNDARY && newQuality >= QUALITY_BOTTOM;

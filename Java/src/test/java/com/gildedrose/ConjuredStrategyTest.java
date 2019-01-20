@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ConjuredStrategyTest {
 
     @Test
-    public void updateItemAtEndOfDay_shouldLowerSellInOfConjuredItemByOne() {
+    public void updateItemAtEndOfDay_shouldDecreaseSellInOfConjuredItemByOne() {
         Item conjured = new Item(ItemType.CONJURED.getFullName(), 20, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{conjured});
 
@@ -17,7 +17,7 @@ public class ConjuredStrategyTest {
     }
 
     @Test
-    public void updateItemAtEndOfDay_shouldLowerQualityOfConjuredItemByTwo() {
+    public void updateItemAtEndOfDay_shouldDecreaseQualityOfConjuredItemByTwo() {
         Item conjured = new Item(ItemType.CONJURED.getFullName(), 20, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{conjured});
 
@@ -27,7 +27,7 @@ public class ConjuredStrategyTest {
     }
 
     @Test
-    public void updateItemAtEndOfDay_shouldNotLowerQualityOfConjuredItem_whenQualityEqualsZero() {
+    public void updateItemAtEndOfDay_shouldNotDecreaseQualityOfConjuredItem_whenQualityEqualsZero() {
         Item conjured = new Item(ItemType.CONJURED.getFullName(), 20, 0);
         GildedRose gildedRose = new GildedRose(new Item[]{conjured});
 
@@ -37,7 +37,7 @@ public class ConjuredStrategyTest {
     }
 
     @Test
-    public void updateItemAtEndOfDay_shouldLowerQualityOfConjuredItemByFour_whenSellInEqualsZero() {
+    public void updateItemAtEndOfDay_shouldDecreaseQualityOfConjuredItemByFour_whenSellInEqualsZero() {
         Item conjured = new Item(ItemType.CONJURED.getFullName(), 0, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{conjured});
 
@@ -47,7 +47,7 @@ public class ConjuredStrategyTest {
     }
 
     @Test
-    public void updateItemAtEndOfDay_shouldLowerQualityOfConjuredItemByFour_whenSellInLowerThanZero() {
+    public void updateItemAtEndOfDay_shouldDecreaseQualityOfConjuredItemByFour_whenSellInDecreaseThanZero() {
         Item conjured = new Item(ItemType.CONJURED.getFullName(), -2, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{conjured});
 
