@@ -6,11 +6,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class AgedBrieStrategyTest {
 
-    private static final String AGED_BRIE = "Aged Brie";
-
     @Test
     public void updateQuality_shouldLowerSellInOfAgedBrieByOne() {
-        Item agedBrie = new Item(AGED_BRIE, 20, 50);
+        Item agedBrie = new Item(ItemType.AGED_BRIE.getFullName(), 20, 50);
         GildedRose gildedRose = new GildedRose(new Item[]{agedBrie});
 
         gildedRose.updateItemAtEndOfDay();
@@ -20,7 +18,7 @@ public class AgedBrieStrategyTest {
 
     @Test
     public void updateQuality_shouldLowerSellInOfAgedBrieToNegativeNumber_whenSellInEqualsZero() {
-        Item agedBrie = new Item(AGED_BRIE, 0, 50);
+        Item agedBrie = new Item(ItemType.AGED_BRIE.getFullName(), 0, 50);
         GildedRose gildedRose = new GildedRose(new Item[]{agedBrie});
 
         gildedRose.updateItemAtEndOfDay();
@@ -30,7 +28,7 @@ public class AgedBrieStrategyTest {
 
     @Test
     public void updateQuality_shouldIncreaseQualityOfAgedBrieByOne_whenQualityIsLowerThanFifty() {
-        Item agedBrie = new Item(AGED_BRIE, 20, 40);
+        Item agedBrie = new Item(ItemType.AGED_BRIE.getFullName(), 20, 40);
         GildedRose gildedRose = new GildedRose(new Item[]{agedBrie});
 
         gildedRose.updateItemAtEndOfDay();
@@ -40,7 +38,7 @@ public class AgedBrieStrategyTest {
 
     @Test
     public void updateQuality_shouldNotIncreaseQualityOfAgedBrie_whenQualityEqualsFifty() {
-        Item agedBrie = new Item(AGED_BRIE, 20, 50);
+        Item agedBrie = new Item(ItemType.AGED_BRIE.getFullName(), 20, 50);
         GildedRose gildedRose = new GildedRose(new Item[]{agedBrie});
 
         gildedRose.updateItemAtEndOfDay();
